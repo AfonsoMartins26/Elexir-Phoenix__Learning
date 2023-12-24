@@ -13,4 +13,22 @@ rem 10,3 = 1
 rem 10,2 = 0"
 
 
+
+#iex> greeting = fn (place) -> "Hello, #{place}!" end --- assim estamos a associar a funcao coma variavel greeting
+#Function<6.52032458/1 in :erl_eval.expr/5>    -- devolde isto que basicamente devolde
+
+#assim se fizermos --iex> greeting.("Mars")
+#e devolve "Hello, Mars!"
+
+
+#iex> greeting = fn (name, gender, age) ->
+#...>   "Hello, #{name}! I see you're #{gender} and you're #{age} years old."
+#...> end
+#Function<18.52032458/3 in :erl_eval.expr/5>
+
+
+#iex> greeting.("Izzy", "Female", "30ish")
+#"Hello, Izzy! I see you're Female and you're 30ish years old!"
+
+
 end
